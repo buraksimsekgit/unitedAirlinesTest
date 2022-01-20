@@ -33,7 +33,6 @@
             <version>6.14.3</version>
             <scope>test</scope>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/net.sourceforge.htmlunit/webdriver -->
         <dependency>
             <groupId>net.sourceforge.htmlunit</groupId>
@@ -41,7 +40,6 @@
             <version>2.6</version>
             <scope>test</scope>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
         <dependency>
             <groupId>com.github.javafaker</groupId>

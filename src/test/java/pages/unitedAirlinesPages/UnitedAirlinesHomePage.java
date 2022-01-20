@@ -1,17 +1,15 @@
-package pages.unitedAppPages;
+package pages.unitedAirlinesPages;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utilities.Waiter;
 
 import java.util.List;
 
-public class UnitedAppHomePage {
+public class UnitedAirlinesHomePage {
 
-    public UnitedAppHomePage(WebDriver driver){
+    public UnitedAirlinesHomePage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
 
