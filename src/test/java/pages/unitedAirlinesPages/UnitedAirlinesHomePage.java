@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import texts.ExpectedTextsForUnitedApp;
 
 import java.util.List;
 
@@ -69,14 +70,14 @@ public class UnitedAirlinesHomePage {
     public WebElement findFlightsButton;
 
     public void login(){
-        tripRadioButtons.get(1).click();
+        clickRadioButtons(ExpectedTextsForUnitedApp.onewayButton);
         departureAndDestinationInput.get(0).clear();
-        departureAndDestinationInput.get(0).sendKeys(departurePoint);
+        departureAndDestinationInput.get(0).sendKeys(getDeparturePoint());
         departureAndDestinationInput.get(1).clear();
-        departureAndDestinationInput.get(1).sendKeys(destinationPoint);
+        departureAndDestinationInput.get(1).sendKeys(getDestinationPoint());
         travelDate.clear();
         travelDate.click();
-        travelDate.sendKeys(date);
+        travelDate.sendKeys(getDate());
         passengerAmountButton.click();
         passengerPlusButton.click();
         cabinType.click();
