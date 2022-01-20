@@ -18,7 +18,6 @@ public class Driver {
 
     public static WebDriver getDriver() {
         if(driver == null){
-            //String browser = "chrome";
             String browser = ConfigReader.getProperty("browser"); //firefox
             switch (browser){
                 case "chrome":

@@ -8,10 +8,8 @@ import utilities.ConfigReader;
 import utilities.Waiter;
 
 public class UnitedAirlinesTest extends Base {
-
-
     @Test(testName = "Validate \"Main menu\" navigation items", priority = 1)
-    public void validateMainMenu() {
+    public void validateMainMenuNavigationItems() {
 
         driver.get(ConfigReader.getProperty("unitedAppURL"));
 
@@ -21,7 +19,7 @@ public class UnitedAirlinesTest extends Base {
     }
 
     @Test(testName = "Validate \"Book travel menu\" navigation items", priority = 2)
-    public void validateBookTravelMenu() {
+    public void validateBookTravelMenuNavigationItems() {
 
         driver.get(ConfigReader.getProperty("unitedAppURL"));
 
@@ -68,13 +66,12 @@ public class UnitedAirlinesTest extends Base {
         }
     }
 
-    @Test(testName = "Validate One-way ticket search results \"from Chicago, IL, US (ORD) to Miami, FL, US (MIA)", priority = 5)
+    @Test(testName = "Validate One-way ticket search results \"from Chicago, IL, US (ORD)\" to \"Miami, FL, US (MIA)\"", priority = 5)
     public void validateOnewayTicketSearchResults() {
 
         driver.get(ConfigReader.getProperty("unitedAppURL"));
 
         unitedAppHomePage.login();
         Assert.assertEquals(unitedAppDepartPage.destination.getText(), ExpectedTextsForUnitedApp.departText);
-
     }
 }
