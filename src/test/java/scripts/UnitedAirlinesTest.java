@@ -5,7 +5,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import texts.ExpectedTextsForUnitedApp;
 import utilities.ConfigReader;
-import utilities.Waiter;
 
 public class UnitedAirlinesTest extends Base {
     @Test(testName = "Validate \"Main menu\" navigation items", priority = 1)

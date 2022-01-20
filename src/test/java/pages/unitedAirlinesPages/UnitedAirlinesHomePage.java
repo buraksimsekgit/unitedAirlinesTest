@@ -29,22 +29,6 @@ public class UnitedAirlinesHomePage {
         return date;
     }
 
-    public void login(){
-        tripRadioButtons.get(1).click();
-        departureAndDestinationInput.get(0).clear();
-        departureAndDestinationInput.get(0).sendKeys(departurePoint);
-        departureAndDestinationInput.get(1).clear();
-        departureAndDestinationInput.get(1).sendKeys(destinationPoint);
-        travelDate.clear();
-        travelDate.click();
-        travelDate.sendKeys(date);
-        passengerAmountButton.click();
-        passengerPlusButton.click();
-        cabinType.click();
-        businessOrFirst.click();
-        findFlightsButton.click();
-    }
-
     @FindBy(xpath = "//div[@role='tablist']/a/span")
     public List<WebElement> navigationMenu;
 
@@ -83,4 +67,20 @@ public class UnitedAirlinesHomePage {
 
     @FindBy(css = "form#bookFlightForm>div:nth-of-type(5)>div>div>div>div>button>span")
     public WebElement findFlightsButton;
+
+    public void login(){
+        tripRadioButtons.get(1).click();
+        departureAndDestinationInput.get(0).clear();
+        departureAndDestinationInput.get(0).sendKeys(departurePoint);
+        departureAndDestinationInput.get(1).clear();
+        departureAndDestinationInput.get(1).sendKeys(destinationPoint);
+        travelDate.clear();
+        travelDate.click();
+        travelDate.sendKeys(date);
+        passengerAmountButton.click();
+        passengerPlusButton.click();
+        cabinType.click();
+        businessOrFirst.click();
+        findFlightsButton.click();
+    }
 }
