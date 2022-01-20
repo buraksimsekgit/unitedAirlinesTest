@@ -33,7 +33,6 @@ public class UnitedAirlinesTest extends Base {
 
         driver.get(ConfigReader.getProperty("unitedAirlinesURL"));
 
-        Waiter.pause(5);
         Assert.assertTrue(unitedAirlinesHomePage.tripRadioButtons.get(0).isDisplayed());
         Assert.assertTrue(unitedAirlinesHomePage.tripRadioButtonsInput.get(0).isEnabled());
         Assert.assertTrue(unitedAirlinesHomePage.tripRadioButtonsInput.get(0).isSelected());
