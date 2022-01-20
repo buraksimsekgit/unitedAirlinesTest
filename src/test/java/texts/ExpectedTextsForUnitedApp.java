@@ -6,4 +6,5 @@ public class ExpectedTextsForUnitedApp {
     public static final String[] navigationItems = {"BOOK", "MY TRIPS", "TRAVEL INFO", "MILEAGEPLUS® PROGRAM", "DEALS", "HELP"};
     public static final String[] bookTravelMenu = {"Book", "Flight status", "Check-in", "My trips"};
     public static final String departText = "Depart: Chicago, IL, US to Miami, FL, US";
+    public static final String onewayButton = "One-way";
 }

@@ -35,7 +35,7 @@ public class UnitedAirlinesHomePage {
     @FindBy(xpath = "//ul[@class='app-components-BookTravel-bookTravel__travelNav--3RNBj']/li/h2")
     public List<WebElement> bookTravelMenu;
 
-    @FindBy(xpath = "//span[@class='app-components-BookFlightForm-bookFlightForm__checkmark--2DHJD']")
+    @FindBy(xpath = "//fieldset[@name='flightType']/div/label")
     public List<WebElement> tripRadioButtons;
 
     @FindBy(xpath = "//fieldset[@name='flightType']/div/label/input")
@@ -83,4 +83,19 @@ public class UnitedAirlinesHomePage {
         businessOrFirst.click();
         findFlightsButton.click();
     }
+
+    public void clickRadioButtons(String radioButtonText){
+        for(WebElement radioButton: tripRadioButtons){
+            if(radioButton.getText().equals(radioButtonText)) {
+                radioButton.click();
+                return;
+            }
+        }
+    }
+
+    public void clickCheckBoxes(){
+        for(WebElement checkBox: checkBoxes){
+                checkBox.click();
+            }
+        }
 }

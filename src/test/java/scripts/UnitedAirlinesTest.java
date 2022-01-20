@@ -7,6 +7,7 @@ import texts.ExpectedTextsForUnitedApp;
 import utilities.ConfigReader;
 
 public class UnitedAirlinesTest extends Base {
+
     @Test(testName = "Validate \"Main menu\" navigation items", priority = 1)
     public void validateMainMenuNavigationItems() {
 
@@ -40,7 +41,7 @@ public class UnitedAirlinesTest extends Base {
         Assert.assertTrue(unitedAirlinesHomePage.tripRadioButtonsInput.get(1).isEnabled());
         Assert.assertFalse(unitedAirlinesHomePage.tripRadioButtonsInput.get(1).isSelected());
 
-        unitedAirlinesHomePage.tripRadioButtons.get(1).click();
+        unitedAirlinesHomePage.clickRadioButtons(ExpectedTextsForUnitedApp.onewayButton);
         Assert.assertFalse(unitedAirlinesHomePage.tripRadioButtonsInput.get(0).isSelected());
     }
 
@@ -49,17 +50,19 @@ public class UnitedAirlinesTest extends Base {
 
         driver.get(ConfigReader.getProperty("unitedAirlinesURL"));
 
-        int counter = 0;
         for (int i = 0; i < unitedAirlinesHomePage.checkBoxes.size(); i++) {
             Assert.assertTrue(unitedAirlinesHomePage.checkBoxes.get(i).isDisplayed());
             Assert.assertTrue(unitedAirlinesHomePage.checkBoxes.get(i).isEnabled());
             Assert.assertFalse(unitedAirlinesHomePage.checkBoxesInput.get(i).isSelected());
-            unitedAirlinesHomePage.checkBoxes.get(counter++).click();
         }
-        counter = 0;
+
+        unitedAirlinesHomePage.clickCheckBoxes();
         for (WebElement radioButton : unitedAirlinesHomePage.checkBoxesInput) {
             Assert.assertTrue(radioButton.isSelected());
-            unitedAirlinesHomePage.checkBoxes.get(counter++).click();
+        }
+
+        unitedAirlinesHomePage.clickCheckBoxes();
+        for (WebElement radioButton : unitedAirlinesHomePage.checkBoxesInput) {
             Assert.assertFalse(radioButton.isSelected());
         }
     }
