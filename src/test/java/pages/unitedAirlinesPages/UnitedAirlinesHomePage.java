@@ -95,7 +95,7 @@ public class UnitedAirlinesHomePage {
 
     public void clickCheckBoxes(){
         for(WebElement checkBox: checkBoxes){
-                checkBox.click();
-            }
+            checkBox.click();
         }
+    }
 }
