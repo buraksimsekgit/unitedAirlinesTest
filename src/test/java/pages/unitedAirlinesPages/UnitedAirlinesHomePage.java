@@ -65,7 +65,7 @@ public class UnitedAirlinesHomePage {
     @FindBy(xpath = "//li[@id='cabinType_item-2']")
     public WebElement businessOrFirst;
 
-    @FindBy(css = "form#bookFlightForm>div:nth-of-type(5)>div>div>div>div>button>span")
+    @FindBy(xpath = "//button[@type='submit']//span")
     public WebElement findFlightsButton;
 
     public void login(){

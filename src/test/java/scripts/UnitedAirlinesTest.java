@@ -33,12 +33,12 @@ public class UnitedAirlinesTest extends Base {
 
         driver.get(ConfigReader.getProperty("unitedAirlinesURL"));
 
-        Assert.assertTrue(unitedAirlinesHomePage.tripRadioButtons.get(0).isDisplayed());
-        Assert.assertTrue(unitedAirlinesHomePage.tripRadioButtonsInput.get(0).isEnabled());
-        Assert.assertTrue(unitedAirlinesHomePage.tripRadioButtonsInput.get(0).isSelected());
+        for (WebElement radioButton : unitedAirlinesHomePage.tripRadioButtons) {
+            Assert.assertTrue(radioButton.isDisplayed());
+            Assert.assertTrue(radioButton.isEnabled());
+        }
 
-        Assert.assertTrue(unitedAirlinesHomePage.tripRadioButtons.get(1).isDisplayed());
-        Assert.assertTrue(unitedAirlinesHomePage.tripRadioButtonsInput.get(1).isEnabled());
+        Assert.assertTrue(unitedAirlinesHomePage.tripRadioButtonsInput.get(0).isSelected());
         Assert.assertFalse(unitedAirlinesHomePage.tripRadioButtonsInput.get(1).isSelected());
 
         unitedAirlinesHomePage.clickRadioButtons(ExpectedTextsForUnitedApp.onewayButton);
@@ -57,13 +57,13 @@ public class UnitedAirlinesTest extends Base {
         }
 
         unitedAirlinesHomePage.clickCheckBoxes();
-        for (WebElement radioButton : unitedAirlinesHomePage.checkBoxesInput) {
-            Assert.assertTrue(radioButton.isSelected());
+        for (WebElement checkBox : unitedAirlinesHomePage.checkBoxesInput) {
+            Assert.assertTrue(checkBox.isSelected());
         }
 
         unitedAirlinesHomePage.clickCheckBoxes();
-        for (WebElement radioButton : unitedAirlinesHomePage.checkBoxesInput) {
-            Assert.assertFalse(radioButton.isSelected());
+        for (WebElement checkBox : unitedAirlinesHomePage.checkBoxesInput) {
+            Assert.assertFalse(checkBox.isSelected());
         }
     }
 
